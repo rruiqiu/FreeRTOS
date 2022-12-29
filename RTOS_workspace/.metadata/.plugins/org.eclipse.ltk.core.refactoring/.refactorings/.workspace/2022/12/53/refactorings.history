@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/0001Tasks/Debug/ThirdParty/SEGGER/Rec/segger_uart.o" element2="/0001Tasks/Debug/ThirdParty/SEGGER/Rec/segger_uart.d" element3="/0001Tasks/Debug/ThirdParty/SEGGER/Rec/segger_uart.su" element4="/0001Tasks/Debug/ThirdParty/SEGGER/Rec/subdir.mk" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1672081475927"/>
+</session>

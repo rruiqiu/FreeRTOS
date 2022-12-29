@@ -1,0 +1,22 @@
+15:01:09 **** Incremental Build of configuration Debug for project 0001Tasks ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I"D:/workspace/RTOS_workspace/0001Tasks/ThirdParty/SEGGER/Config" -I"D:/workspace/RTOS_workspace/0001Tasks/ThirdParty/SEGGER/OS" -I"D:/workspace/RTOS_workspace/0001Tasks/ThirdParty/SEGGER/Segger" -I"D:/workspace/RTOS_workspace/0001Tasks/ThirdParty/FreeRTOS" -I"D:/workspace/RTOS_workspace/0001Tasks/ThirdParty/FreeRTOS/include" -I"D:/workspace/RTOS_workspace/0001Tasks/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:3: warning: implicit declaration of function 'SEGGER_UART_init'; did you mean 'SEGGER_UART_REC'? [-Wimplicit-function-declaration]
+  101 |   SEGGER_UART_init(250000);
+      |   ^~~~~~~~~~~~~~~~
+      |   SEGGER_UART_REC
+arm-none-eabi-gcc -o "0001Tasks.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\workspace\RTOS_workspace\0001Tasks\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0001Tasks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0001Tasks.elf
+ 
+arm-none-eabi-size   0001Tasks.elf 
+arm-none-eabi-objdump -h -S  0001Tasks.elf  > "0001Tasks.list"
+   text	   data	    bss	    dec	    hex	filename
+  30728	    136	  96928	 127792	  1f330	0001Tasks.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0001Tasks.list
+ 
+
+15:01:10 Build Finished. 0 errors, 1 warnings. (took 1s.109ms)
+
