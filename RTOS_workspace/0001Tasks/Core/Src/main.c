@@ -53,7 +53,7 @@ static void MX_GPIO_Init(void);
 static void task1_handler(void *parameters);
 
 static void task2_handler(void *parameters);
-
+extern void SEGGER_UART_init(uint32_t);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
